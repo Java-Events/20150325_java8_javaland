@@ -1,0 +1,2913 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java 8 - Kickstarter</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--This one seems to work all the time, but really small on ipad-->
+    <!--<meta name="viewport" content="initial-scale=0.4">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" media="all" href="theme/css/default.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+    <base target="_blank">
+    <!-- This amazingness opens all links in a new tab. -->
+    <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+<slide hidden>
+    Hidden slides are left out of the presentation.
+</slide>
+
+<!--<slide class="logoslide nobackground">-->
+<!--<article class="flexbox vcenter">-->
+<!--&lt;!&ndash;<span><img src="images/logo_sru.png"></span>&ndash;&gt;-->
+<!--<span><img src="images/logo_siteos.gif"></span>-->
+<!--</article>-->
+<!--</slide>-->
+
+<slide class="segue dark nobackground">
+    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <aside class="gdbar">codecentric AG</aside>
+    <hgroup class="auto-fadein">
+        <h2>prepare..</h2>
+        <h3>.. for Java 8 - Kickstarter </h3>
+        <h4>Start 09:00 </h4>
+    </hgroup>
+    <!--<article class="flexbox vcenter">-->
+    <article class="flexbox vright">
+        <span><img src="images/Duke_lambda-java8.jpg"></span>
+    </article>
+</slide>
+
+<!--<slide class="segue dark nobackground">-->
+    <!--&lt;!&ndash;<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">&ndash;&gt;-->
+    <!--<aside class="gdbar"><img src="images/logo_sru.png"></aside>-->
+    <!--<hgroup class="auto-fadein">-->
+        <!--<h2>prepare..</h2>-->
+        <!--<h3>.. for Java 8 - Streams </h3>-->
+        <!--<h4>Start 18:00 </h4>-->
+    <!--</hgroup>-->
+    <!--&lt;!&ndash;<article class="flexbox vcenter">&ndash;&gt;-->
+    <!--<article class="flexbox vright">-->
+        <!--<span><img src="images/Duke_lambda-java8.jpg"></span>-->
+    <!--</article>-->
+<!--</slide>-->
+
+
+<!--Intro-->
+<slide class="title-slide segue nobackground">
+    <!--<aside class="gdbar"><img src="images/logo_sru.png"></aside>-->
+    <aside class="gdbar">codecentric AG</aside>
+    <!--<aside class="gdbar"><img src="images/logo_siteos.gif"></aside>-->
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+        <h1 data-config-title><!-- populated from slide_config.json --></h1>
+        <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+        <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+</slide>
+
+
+<!--Kapitel Intro-->
+<!--<slide>-->
+    <!--<hgroup>-->
+        <!--<h2>Slide Überschrift</h2>-->
+        <!--<h3>Untertitel</h3>-->
+    <!--</hgroup>-->
+    <!--<article class="smaller">-->
+        <!--<p>folgendes erwartet uns: </p>-->
+        <!--<ul class="build">-->
+            <!--<li>Abschnitt 1</li>-->
+            <!--<li>Abschnitt 2</li>-->
+        <!--</ul>-->
+    <!--</article>-->
+<!--</slide>-->
+<slide>
+    <!--<aside class="gdbar">codecentric AG</aside>-->
+    <hgroup>
+        <h2>Sven Ruppert</h2>
+        <h3>coding java since 1996</h3>
+    </hgroup>
+    <article >
+        <div style="text-align: center;">
+            <b>
+                <p>Principal IT Consultant</p>
+                <p><img src="images/logo-codecentric.png"></p>
+                <p>Standort - München</p>
+            </b>
+        </div>
+    </article>
+</slide>
+<slide>
+    <!--<aside class="gdbar">codecentric AG</aside>-->
+    <hgroup>
+        <h2>Twittert bitte ;-)</h2>
+        <h3>Zeigt der Community das ihr aktiv seid !!</h3>
+    </hgroup>
+    <article >
+        <div style="text-align: center;">
+            <b>
+                <p>Principal IT Consultant</p>
+                <p><img src="images/logo-codecentric.png"></p>
+                <p>Standort - München</p>
+                <p>@SvenRuppert</p>
+            </b>
+        </div>
+    </article>
+</slide>
+<!--Kapitel Uebersicht-->
+<slide>
+    <hgroup>
+        <h2>Sven Ruppert</h2>
+        <h3>speaking java since 1996</h3>
+    </hgroup>
+    <article class="smaller">
+        </p>
+        <p>Projekte aus den Bereichen:
+        <ul class="build">
+            <li>Automobilindustrie</li>
+            <li>Energieversorgung</li>
+            <li>Finanzen / Leasingbranche</li>
+            <li>Luft - Raumfahrt / Satelliten</li>
+            <li>Behörden / UN / Weltbank</li>
+        </ul>
+        </p>
+        <p>Wo?
+        <ul class="build">
+            <li>Europa</li>
+            <li>Asien - Indien bis Malaysia</li>
+        </ul>
+        </p>
+    </article>
+</slide>
+
+
+<!--#######################################################################################-->
+<!--#######################################################################################-->
+<!--#############################     Java 8 JSR 310     ##################################-->
+<!--#######################################################################################-->
+<!--#######################################################################################-->
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>java.time - lesson learned by JODA Time</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <li>Overview</li>
+            <li>Core Packages</li>
+            <li>Naming Conventions</li>
+            <li>Beispiele</li>
+            <li>Übungen</li>
+        </ul>
+    </article>
+
+</slide>
+
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Overview</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Eigenschaften des JSR310 </p>
+        <ul class="build">
+            <li>Clear</li>
+            <li>Fluent</li>
+            <li>Immuntable</li>
+            <li>Extensible</li>
+        </ul>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Overview - Clear</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Die Eigenschaften sind intuitiver (Meinung von Oracle)</p>
+        <p>Beispiel: Wenn ein Parameter mit null übergeben wird, wird eine NullPointerException geworfen.</p>
+        <p>Ob das im Detail so ist (intuitiver), muss jeder für sich selbst entscheiden.</p>
+        <p>Viel aus dem Projekt JODA Time gelernt.</p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Overview - Fluent</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Es wird eine fluent API angeboten.</p>
+        <p>Die meisten Methoden erlauben weder ein null als Übergabeparameter,
+        noch geben sie null als Ergebnis zurück.</p>
+        <p>
+            (siehe Oracle)
+            <pre class="prettyprint" data-lang="java">
+LocalDate today = LocalDate.now();
+LocalDate payday = today.with(TemporalAdjuster.lastDayOfMonth()).minusDays(2);</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Overview - Immutable</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Die meisten Klassen wurden immutable implementiert.</p>
+        <p>Date-Time API ist thread-save.</p>
+        <p>Die meisten Methoden beginnen mit of, from, with</p>
+        <p>Keine Konstruktorparameter, kaum setter</p>
+        <p>
+            (siehe Oracle)
+            <pre class="prettyprint" data-lang="java">
+LocalDate dateOfBirth = LocalDate.of(2012, Month.MAY, 14);
+LocalDate firstBirthday = dateOfBirth.plusYears(1);</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Overview - Extensible</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Wo immer möglich, kann die API erweitert werden.</p>
+        <p>z.B. TimeAdjuster,Queries,  eigenes CalendarSystem...</p>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Core Packages</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Core Packages des JSR310 </p>
+        <ul class="build">
+            <li>java.time</li>
+            <li>java.time.chrono</li>
+            <li>java.time.format</li>
+            <li>java.time.temporal</li>
+            <li>java.time.zone</li>
+        </ul>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Core Packages - java.time</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>java.time</p>
+        <p>Core API zur Darstellung von Datum und Zeit. (ISO-8601)</p>
+        <p>Immutable, thread-safe</p>
+        <p>date, time date/time kombiniert, Zeitzonen, Dauer, Clocks, ..</p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Core Packages - java.time.chrono</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>java.time.chrono</p>
+        <p>Alle anderen Calendar-Systeme als ISO-8601</p>
+        <p>nur von Interesse wenn man eigene Calendar-Systeme entwicklen möchte</p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Core Packages - java.time.format</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>java.time.format</p>
+        <p>Formatieren und parsen der Datums- und Zeitangaben</p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Core Packages - java.time.temporal</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>java.time.temporal</p>
+        <p>Extended API, für Frameworkentwickler</p>
+        <p>Ermöglicht die programatische Interoperation zwischen den Basisklassen</p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Core Packages - java.time.zone</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>java.time.zone</p>
+        <p>Support für Zeitzonen</p>
+        <p>wichtigste Klassen: ZonedDateTime, ZoneId, ZoneOffset</p>
+    </article>
+</slide>
+
+<!--<li>java.time</li>-->
+<!--<li>java.time.chrono</li>-->
+<!--<li>java.time.format</li>-->
+<!--<li>java.time.temporal</li>-->
+<!--<li>java.time.zone</li>-->
+
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Naming - Conventions</h3>
+    </hgroup>
+    <article class="smaller">
+        <ul class="build">
+            <li>of - erzeugen von Instanzen</li>
+            <li>from - erzeugen von Instanzen basierend auf Eingangsinstanz</li>
+            <li>parse - erzeugen von Instanzen basierend auf Strings</li>
+            <li>format - erzeugen von Strings basierend auf Pattern</li>
+            <li>get - Std Getter Methode</li>
+            <li>is - Queries auf den Objektzustand</li>
+            <li>with - erzeugt Kopie basierend auf Attributänderung</li>
+            <li>plus - erzeugt Kopie basierend auf Attributänderung</li>
+            <li>minus - erzeugt Kopie basierend auf Attributänderung</li>
+            <li>to - konvertieren in die Instanz der Zielklasse</li>
+            <li>at - konvertieren in die Instanz der Zielklasse</li>
+        </ul>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            DayOfWeek:
+<pre class="prettyprint" data-lang="java">
+        DayOfWeek dow = DayOfWeek.MONDAY;
+        Locale locale = Locale.getDefault();
+        System.out.println(dow.getDisplayName(TextStyle.FULL, locale));
+        System.out.println(dow.getDisplayName(TextStyle.NARROW, locale));
+        System.out.println(dow.getDisplayName(TextStyle.SHORT, locale));
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Month:
+<pre class="prettyprint" data-lang="java">
+        Month month = Month.AUGUST;
+        Locale locale = Locale.getDefault();
+        System.out.println(month.getDisplayName(TextStyle.FULL, locale));
+        System.out.println(month.getDisplayName(TextStyle.NARROW, locale));
+        System.out.println(month.getDisplayName(TextStyle.SHORT, locale));
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            LocalDate:
+<pre class="prettyprint" data-lang="java">
+        LocalDate date = LocalDate.of(2014, Month.APRIL, 3);
+        LocalDate nextWed = date.with(TemporalAdjusters.next(DayOfWeek.WEDNESDAY));
+        System.out.println("nextWed = " + nextWed); //nextWed = 2014-04-09
+
+        DayOfWeek dotw = LocalDate.of(2014, Month.APRIL, 3).getDayOfWeek();
+        System.out.println("dotw = " + dotw); //dotw = THURSDAY
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            YearMonth:
+<pre class="prettyprint" data-lang="java">
+        YearMonth date = YearMonth.now();
+        //2014-03: 31 - dep on the Date now ;-)
+        System.out.printf("%s: %d%n", date, date.lengthOfMonth());
+
+        YearMonth date2 = YearMonth.of(2010, Month.FEBRUARY);
+        //2010-02: 28
+        System.out.printf("%s: %d%n", date2, date2.lengthOfMonth());
+
+        //2012-02: 29
+        YearMonth date3 = YearMonth.of(2012, Month.FEBRUARY);
+        System.out.printf("%s: %d%n", date3, date3.lengthOfMonth());
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            MonthDay:
+<pre class="prettyprint" data-lang="java">
+        MonthDay date = MonthDay.of(Month.FEBRUARY, 29);
+        boolean validLeapYear = date.isValidYear(2010);
+        System.out.println("validLeapYear = " + validLeapYear);
+        IntStream
+                .rangeClosed(2010, 2015)
+                .forEach(v->System.out.println("validLeapYear ("+v+") = " + date.isValidYear(v)));
+        /*
+        validLeapYear = false
+        validLeapYear (2010) = false
+        validLeapYear (2011) = false
+        validLeapYear (2012) = true
+        validLeapYear (2013) = false
+        validLeapYear (2014) = false
+        validLeapYear (2015) = false
+        */
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            LocalTime:
+<pre class="prettyprint" data-lang="java">
+        LocalTime thisSec = LocalTime.now();
+        System.out.println("thisSec.getHour() = " + thisSec.getHour());
+        System.out.println("thisSec.getMinute() = " + thisSec.getMinute());
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            LocalDateTime:
+<pre class="prettyprint" data-lang="java">
+        System.out.printf("now: %s%n", LocalDateTime.now());
+        System.out.printf("Apr 15, 1994 @ 11:30am: %s%n",
+                LocalDateTime.of(1994, Month.APRIL, 15, 11, 30));
+        System.out.printf("now (from Instant): %s%n",
+                LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault()));
+        System.out.printf("6 months from now: %s%n",
+                LocalDateTime.now().plusMonths(6));
+        System.out.printf("6 months ago: %s%n",
+                LocalDateTime.now().minusMonths(6));
+        /*
+        now: 2014-03-31T10:39:31.088
+        Apr 15, 1994 @ 11:30am: 1994-04-15T11:30
+        now (from Instant): 2014-03-31T10:39:31.104
+        6 months from now: 2014-09-30T10:39:31.104
+        6 months ago: 2013-09-30T10:39:31.104 */
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            ZoneId and ZoneOffset:
+<pre class="prettyprint" data-lang="java">
+        LocalDateTime dt = LocalDateTime.now();
+        System.out.println("dt = " + dt);
+
+        final ZoneId zoneId = ZoneId.systemDefault();
+        final ZonedDateTime zonedDateTimeLocal = dt.atZone(zoneId);
+        System.out.println("zonedDateTimeLocal = " + zonedDateTimeLocal);
+        //Australia/Darwin     +09:30
+        final ZoneId zoneIdAU = ZoneId.of("Australia/Darwin");
+        final ZonedDateTime zonedDateTimeAU = dt.atZone(zoneIdAU);
+        System.out.println("zonedDateTimeAU    = " + zonedDateTimeAU);
+        final ZoneOffset offset = zonedDateTimeAU.getOffset();
+        System.out.println("offset = " + offset);
+        /*
+        dt = 2014-03-31T10:58:43.098
+        zonedDateTimeLocal = 2014-03-31T10:58:43.098+02:00[Europe/Berlin]
+        zonedDateTimeAU    = 2014-03-31T10:58:43.098+09:30[Australia/Darwin]
+        offset = +09:30
+        */
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            OffsetDate / OffsetDateTime:
+<pre class="prettyprint" data-lang="java">
+        LocalDateTime date = LocalDateTime.of(2014, Month.APRIL, 20, 19, 30);
+        ZoneOffset offset = ZoneOffset.of("-02:00");
+        OffsetDateTime dateOffset = OffsetDateTime.of(date, offset);
+        OffsetDateTime lastThursday =
+                dateOffset.with(TemporalAdjusters.lastInMonth(DayOfWeek.THURSDAY));
+        System.out.printf("The last Thursday in April 2014 is the %sth.%n",
+                lastThursday.getDayOfMonth());
+        /*
+        The last Thursday in April 2014 is the 24th.
+        */
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Instant:
+<pre class="prettyprint" data-lang="java">
+        final DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy  hh:mm a");
+
+        final ZonedDateTime zonedDayTimeNow = ZonedDateTime.now();
+        final String out = zonedDayTimeNow.format(format);
+        System.out.println("now = " + out);
+        /*
+        now = 31.03.2014  01:05 PM
+        */
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Parsing / Formatting:
+<pre class="prettyprint" data-lang="java">
+        final DateTimeFormatter format = DateTimeFormatter.ofPattern("dd.MM.yyyy  hh:mm a");
+
+        final ZonedDateTime zonedDayTimeNow = ZonedDateTime.now();
+        final String out = zonedDayTimeNow.format(format);
+        System.out.println("now = " + out);
+        final LocalDate localDate = LocalDate.parse(out, format);
+        System.out.println("localDate = " + localDate);
+        /*
+        now = 31.03.2014  01:05 PM
+        */
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            ChronoFields / IsoFields:
+<pre class="prettyprint" data-lang="java">
+import static java.time.temporal.ChronoField.CLOCK_HOUR_OF_DAY;
+import static java.time.temporal.ChronoField.DAY_OF_WEEK;
+final LocalDate now = LocalDate.now();
+System.out.println("LocalDate-CLOCK_HOUR_OF_DAY = " + now.isSupported(CLOCK_HOUR_OF_DAY));
+System.out.println("LocalDate-DAY_OF_WEEK = " + now.isSupported(DAY_OF_WEEK));
+final LocalDateTime localDateTime = LocalDateTime.now();
+System.out.println("localDateTime-CLOCK_HOUR_OF_DAY = " + localDateTime.isSupported(CLOCK_HOUR_OF_DAY));
+System.out.println("localDateTime-DAY_OF_WEEK = " + localDateTime.isSupported(DAY_OF_WEEK));
+final int i = now.get(IsoFields.QUARTER_OF_YEAR);
+System.out.println("QUARTER_OF_YEAR = " + i);
+/*
+LocalDate-CLOCK_HOUR_OF_DAY = false
+LocalDate-DAY_OF_WEEK = true
+localDateTime-CLOCK_HOUR_OF_DAY = true
+localDateTime-DAY_OF_WEEK = true
+QUARTER_OF_YEAR = 1
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            TemporalAdjuster 1 / 2:
+<pre class="prettyprint" data-lang="java">
+        LocalDate date = LocalDate.of(2014, Month.APRIL, 3);
+        DayOfWeek dotw = date.getDayOfWeek();
+        System.out.printf("%s is on a %s%n", date, dotw);
+        System.out.printf("first day of Month: %s%n",
+                date.with(TemporalAdjusters.firstDayOfMonth()));
+
+        final LocalDate d1 = date.with(new MyTemporalAdjuster());
+        System.out.println("d1 = " + d1);
+
+        final LocalDate dateSa = LocalDate.of(2014, Month.APRIL, 5);
+        System.out.println("d2 = " + dateSa.with(new MyTemporalAdjuster()));
+/*
+2014-04-03 is on a THURSDAY
+first day of Month: 2014-04-01
+d1 = 2014-04-03
+d2 = 2014-04-07
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            TemporalAdjuster 2 / 2:
+<pre class="prettyprint" data-lang="java">
+    public static class MyTemporalAdjuster implements TemporalAdjuster {
+        @Override
+        public Temporal adjustInto(Temporal temporal) {
+            final LocalDate localDate = LocalDate.from(temporal);
+            final DayOfWeek dayOfWeek = localDate.getDayOfWeek();
+            if (dayOfWeek == DayOfWeek.SATURDAY || dayOfWeek == DayOfWeek.SUNDAY) {
+                final TemporalAdjuster next = TemporalAdjusters.next(DayOfWeek.MONDAY);
+                return temporal.with(next);
+            } else {
+                return temporal.with(localDate);
+            }
+        }
+    }
+/*
+2014-04-03 is on a THURSDAY
+first day of Month: 2014-04-01
+d1 = 2014-04-03
+d2 = 2014-04-07
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            TemporalQueries 1 / 3:
+<pre class="prettyprint" data-lang="java">
+        TemporalQuery&lt;TemporalUnit&gt; query = TemporalQueries.precision();
+        System.out.printf("LocalDate precision is %s%n",
+        LocalDate.now().query(query));
+        System.out.printf("LocalDateTime precision is %s%n",
+        LocalDateTime.now().query(query));
+        System.out.printf("Year precision is %s%n",
+        Year.now().query(query));
+        System.out.printf("YearMonth precision is %s%n",
+        YearMonth.now().query(query));
+        System.out.printf("Instant precision is %s%n",
+        Instant.now().query(query));
+/*
+        LocalDate precision is Days
+        LocalDateTime precision is Nanos
+        Year precision is Years
+        YearMonth precision is Months
+        Instant precision is Nanos
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            TemporalQueries 2 / 3:
+<pre class="prettyprint" data-lang="java">
+        final Boolean isApril6Mon = of(2014, APRIL, 6).query(new MyTemporalQuery());
+        final Boolean isApril7Mon = of(2014, APRIL, 7).query(new MyTemporalQuery());
+        System.out.println("isApril6Mon = " + isApril6Mon);
+        System.out.println("isApril7Mon = " + isApril7Mon);
+
+        public static class MyTemporalQuery implements TemporalQuery&lt;Boolean&gt;{
+        @Override
+            public Boolean queryFrom(TemporalAccessor temporal) {
+                final int i = temporal.get(ChronoField.DAY_OF_WEEK);
+                if (MONDAY.getValue() == i) return Boolean.TRUE;
+                else return Boolean.FALSE;
+            }
+        }
+/*
+isApril6Mon = false
+isApril7Mon = true
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            TemporalQueries 3 / 3:
+<pre class="prettyprint" data-lang="java">
+        final TemporalQuery&lt;Boolean&gt; temporalQuery = v -> {
+            final int i = v.get(ChronoField.DAY_OF_WEEK);
+            if (MONDAY.getValue() == i) return Boolean.TRUE;
+            else return Boolean.FALSE;
+        };
+
+        final Boolean isApril6Mon = of(2014, APRIL, 6).query(temporalQuery);
+        final Boolean isApril7Mon = of(2014, APRIL, 7).query(temporalQuery);
+        System.out.println("isApril6Mon = " + isApril6Mon);
+        System.out.println("isApril7Mon = " + isApril7Mon);
+
+/*
+isApril6Mon = false
+isApril7Mon = true
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Period / Duration 1 / 2:
+<pre class="prettyprint" data-lang="java">
+        final Instant t1 = Instant.now();
+        final Instant t2 = t1.plusSeconds(10);
+
+        System.out.println("t1 = " + t1);
+        System.out.println("t2 = " + t2);
+        final Duration between = Duration.between(t1, t2);
+        final long seconds = between.getSeconds();
+        System.out.println("seconds = " + seconds);
+
+/*
+t1 = 2014-04-01T09:05:57.854Z
+t2 = 2014-04-01T09:06:07.854Z
+seconds = 10
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Period / Duration 2 / 2:
+<pre class="prettyprint" data-lang="java">
+        System.out.println(ChronoUnit.SECONDS.between(t2, t1));
+        final LocalDate d1 = LocalDate.of(2010, 10, 10);
+        final LocalDate d2 = LocalDate.of(2011, 10, 10);
+        final Period period = Period.between(d1, d2);
+        System.out.println("period = " + period);
+        System.out.println("total years " + period.getYears());
+        System.out.println("total month " + period.getMonths());
+        System.out.println("total days  " + period.getDays());
+        System.out.println("total month " + period.toTotalMonths());
+
+/*
+-10
+period = P1Y
+total years 1
+total month 0
+total days  0
+total month 12
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Clock:
+<pre class="prettyprint" data-lang="java">
+        final Clock clock = Clock.systemDefaultZone();
+        final ZoneId zone = clock.getZone();
+        System.out.println("zone = " + zone);
+        final Instant instant = clock.instant();
+        System.out.println("instant = " + instant);
+        final Clock fixed = Clock.fixed(instant, zone);
+        System.out.println("fixed.instant() = " + fixed.instant());
+        System.out.println("fixed.instant() = " + fixed.instant());
+        System.out.println("fixed.instant() = " + fixed.instant());
+/*
+zone = Europe/Berlin
+instant = 2014-04-01T11:22:01.757Z
+fixed.instant() = 2014-04-01T11:22:01.757Z
+fixed.instant() = 2014-04-01T11:22:01.757Z
+fixed.instant() = 2014-04-01T11:22:01.757Z
+fixed.instant() = 2014-04-01T11:22:01.757Z
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Non-ISO-Based Date :
+<pre class="prettyprint" data-lang="java">
+        LocalDateTime date = LocalDateTime.of(2013, Month.JULY, 20, 19, 30);
+        JapaneseDate jdate = JapaneseDate.from(date);
+        System.out.println("jdate = " + jdate);
+        HijrahDate hdate = HijrahDate.from(date);
+        System.out.println("hdate = " + hdate);
+/*
+jdate = Japanese Heisei 25-07-20
+hdate = Hijrah-umalqura AH 1434-09-12
+*/
+</pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Legacy Code :
+<pre class="prettyprint" data-lang="java">
+        Instant inst = new Date().toInstant();
+        Date newDate = Date.from(inst);
+
+        final Instant now = Calendar.getInstance().toInstant();
+        ZonedDateTime zdt = ZonedDateTime.ofInstant(now, ZoneId.systemDefault());
+</pre>
+        </p>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Overview</h3>
+
+    </hgroup>
+    <article class="smaller">
+        <table border="1" summary="summary of functionality in the temporal-based classes" style="zoom: 75%; font-size: 10">
+        <tr>
+            <th id="h1">Class or Enum</th>
+            <th id="h2">Year</th>
+            <th id="h3">Month</th>
+            <th id="h4">Day</th>
+            <th id="h5">Hours</th>
+            <th id="h6">Minutes</th>
+            <th id="h7">Seconds*</th>
+            <th id="h8">Zone Offset</th>
+            <th id="h9">Zone ID</th>
+            <th id="h10">toString Output</th>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>Instant</tt></td>
+            <td headers="h2">&nbsp;</td>
+            <td headers="h3">&nbsp;</td>
+            <td headers="h4">&nbsp;</td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">
+                <div style="text-align: center;"><img src="images/check.gif" width="10" height="10" align="bottom" alt="checked" /></div></td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>2013-08-20T15:16:26.355Z</tt></td>
+
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>LocalDate</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">&nbsp;</td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>2013-08-20</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>LocalDateTime</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h5">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h6">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h7">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>2013-08-20T08:16:26.937</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>ZonedDateTime</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h5">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h6">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h7">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h8">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h9">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h10"><tt>2013-08-21T00:16:26.941+09:00[Asia/Tokyo]</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>LocalTime</tt></td>
+            <td headers="h2">&nbsp;</td>
+            <td headers="h3">&nbsp;</td>
+            <td headers="h4">&nbsp;</td>
+            <td headers="h5">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h6">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h7">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>08:16:26.943</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>MonthDay</tt></td>
+            <td headers="h2">&nbsp;</td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">&nbsp;</td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>--08-20</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>Year</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h3">&nbsp;</td>
+            <td headers="h4">&nbsp;</td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">&nbsp;</td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>2013</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>YearMonth</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">&nbsp;</td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">&nbsp;</td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>2013-08</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>Month</tt></td>
+            <td headers="h2">&nbsp;</td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">&nbsp;</td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">&nbsp;</td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>AUGUST</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>OffsetDateTime</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h4">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h5">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h6">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h7">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h8">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>2013-08-20T08:16:26.954-07:00</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>OffsetTime</tt></td>
+            <td headers="h2">&nbsp;</td>
+            <td headers="h3">&nbsp;</td>
+            <td headers="h4">&nbsp;</td>
+            <td headers="h5">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h6">
+                <center><img src="images/check.gif" width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h7">
+                <center><img src=images/check.gif width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h8">
+                <center><img src=images/check.gif width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>08:16:26.957-07:00</tt></td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>Duration</tt></td>
+            <td headers="h2">&nbsp;</td>
+            <td headers="h3">&nbsp;</td>
+            <td headers="h4" align="center">**</td>
+            <td headers="h5" align="center">**</td>
+            <td headers="h6" align="center">**</td>
+            <td headers="h7">
+                <center><img src=images/check.gif width="10" height="10"  align="bottom" alt="checked" /></center></td>
+            <td headers="h8">&nbsp;</td>
+            <td headers="h9">&nbsp;</td>
+            <td headers="h10"><tt>PT20H</tt> (20 hours)</td>
+        </tr>
+
+        <tr>
+            <td headers="h1"><tt>Period</tt></td>
+            <td headers="h2">
+                <center><img src="images/check.gif" width="12" height="12" align="bottom" alt="checked" /></center></td>
+            <td headers="h3">
+                <center><img src="images/check.gif" width="12" height="12" align="bottom" alt="checked" /></center></td>
+            <td headers="h4">
+                <center><img src="images/check.gif" width="12" height="12" align="bottom" alt="checked" /></center></td>
+            <td headers="h5">&nbsp;</td>
+            <td headers="h6">&nbsp;</td>
+            <td headers="h7">&nbsp;</td>
+            <td headers="h8" align="center">***</td>
+            <td headers="h9" align="center">***</td>
+            <td headers="h10"><tt>P10D</tt> (10 days)</td>
+        </tr>
+
+        </table>
+    </article>
+</slide>
+
+
+
+
+<slide>
+    <hgroup>
+        <h2>Java 8 - JSR310</h2>
+        <h3>Aufgabe</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Select the ServiceCenter</p>
+        <p>Ein User gibt eine Nachricht in ein SupportSystem ein.
+        Basierend auf seiner Zeitzone und Urzeit/Datum soll der ServiceCenter ausgewählt werden der gerade
+            aktiv ist.
+        </p>
+        <p>ServiceCenter sind: Berlin, New York, Sydney,Kuala Lumpur.</p>
+        <p>Geschäftszeiten: 0900 - 1600</p>
+        <p>Ist gerade keines aktiv, soll das nächst öffnende ausgesucht werden.</p>
+    </article>
+</slide>
+
+
+
+
+
+
+
+
+
+
+
+<!--#######################################################################################-->
+<!--#######################################################################################-->
+<!--#############################     Java 8 Streams     ##################################-->
+<!--#######################################################################################-->
+<!--#######################################################################################-->
+
+
+<!--Kapitel Uebersicht-->
+<slide>
+    <hgroup>
+        <h2>Java 8 - Streams</h2>
+        <h3>Overview</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <li>Data in - Data out</li>
+            <li>Core Methods</li>
+            <li>Streams v Threads v Serial</li>
+            <li>JavaFX Beispiel</li>
+            <li>Streams Pattern Beispiele</li>
+        </ul>
+    </article>
+
+</slide>
+
+<!--Kapitel 1 - Streams intro-->
+<slide>
+    <hgroup>
+        <h2>Java 8 - Streams</h2>
+        <h3>Data in - Data out</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <li>Was sind Streams</li>
+            <li>Daten - Quellen</li>
+            <li>Daten - Senken</li>
+            <li>Fazit</li>
+        </ul>
+    </article>
+</slide>
+
+<!--Kapitel 1 - Streams Was sind Streams -->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Data in - Data out- <b>Was sind Streams</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Streams in Java8 sind:
+            <ul>
+                <li>Sind keine Datenstruktur</li>
+                <li>Für den Einsatz von Lambdas konzipiert worden</li>
+                <li>Bieten keinen wahlfreien Zugriff per Index oder ähnliches</li>
+                <li>Sind lazy organisiert</li>
+                <li>Sind parallel, wenn gewünscht</li>
+                <li>Sind ungebunden, da sie nicht wie Collections initial befüllt werden</li>
+            </ul>
+        </p>
+    </article>
+</slide>
+
+<!--Kapitel 1 - Streams Was sind Streams -->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Data in - Data out- <b>Daten - Quellen</b></h3>
+    </hgroup>
+    <article class="smaller">
+            Streams können statisch oder dynamisch befüllt werden.
+        <p>
+            Statisch:
+            <pre class="prettyprint" data-lang="java">
+Stream.of(val1,val2,val3…) , Stream.of(array) und list.stream().
+            </pre>
+        </p>
+        <p>
+            Dynamisch:
+            <pre class="prettyprint" data-lang="java">
+final Stream&lt;Pair&gt; stream = Stream.&lt;Pair&gt;builder().add(new Pair()).build();
+<b>Stream.generate(() -&gt; {</b>
+    final Pair p = new Pair();
+    p.id = random.nextInt(100);
+    p.value = &quot;Value + &quot; + p.id;
+<b>
+    return p;
+   })</b>
+            </pre>
+        </p>
+    </article>
+</slide>
+
+<!--Kapitel 1 - Streams Was sind Streams -->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Data in - Data out- <b>Daten - Senken</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            <pre class="prettyprint" data-lang="java">
+stream.toArray();
+stream.collect(Collectors.toList());
+stream.collect(Collectors.toSet());
+stream.collect(Collectors.groupingBy(..))
+            </pre>
+        </p>
+        <p>
+            Ergebnis als Array und als Map
+            <pre class="prettyprint" data-lang="java">
+final List&lt;Pair&gt; generateDemoValues = generateDemoValues();  <br/>
+final Pair[] toArray = generateDemoValues.stream()<b>.toArray(Pair[]::new);</b>    <br/>
+final Map&lt;Integer,List&lt;Pair&gt;&gt; collectedToMap = generateDemoValues.stream()
+        <b>.collect(Collectors.groupingBy(Pair::getId)</b>);
+            </pre>
+        </p>
+    </article>
+</slide>
+
+<!--Kapitel 1 - Streams Was sind Streams -->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Data in - Data out- <b>Fazit</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Sehr schön zu sehen ist, dass sich die Streams einfach in bestehenden
+            JavaCode einbinden lassen.
+         </p>
+        <p>
+            Keine unnötigen Wrapper oder ähnliches sind
+            zu schreiben. Die Integration ist damit mühelos in Altprojekten genauso
+            möglich wie in neuen Projekten.
+        </p>
+        <p>
+            Hat man sich an die API ein wenig gewöhnt,
+            fallen einem sehr viele Stellen auf, in denen eine starke Codereduktion
+            durch den Einsatz von Streams erreicht werden kann.
+        </p>
+    </article>
+</slide>
+
+
+<!--Kapitel 1 - Streams Was sind Streams -->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Data in - Data out- <b>Aufgaben</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Erzeuge einen Stream aus 10 Elementen der Klasse Pair.
+        <ul>
+            <li>aus einer Liste</li>
+            <li>mit einem Builder</li>
+            <li>mit einem Suplier</li>
+        </ul>
+        </p>
+        <p>
+            Konsumiere alle Elemente des Streams. (System.out)
+        </p>
+
+        <p>
+            Überführe den Stream in
+        <ul>
+            <li>eine Liste</li>
+            <li>ein Array</li>
+            <li>in eine Map</li>
+        </ul>
+        </p>
+
+    </article>
+</slide>
+
+
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+
+<!--Kapitel 2 - Core Methods-->
+<slide>
+    <hgroup>
+        <h2>Java 8 - Streams</h2>
+        <h3>Core Methods</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <li>forEach</li>
+            <li>map</li>
+            <li>filter</li>
+            <li>findFirst</li>
+            <li>reduce</li>
+            <li>limit/skip</li>
+            <li>distinct</li>
+            <li>min/max</li>
+            <li>allMatch/anyMatch/noneMatch</li>
+            <li>parallel / sequenziell</li>
+            <li>Fazit</li>
+        </ul>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>forEach</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Diese Methode ist auch bei Iterable, List, Map und einigen anderen Klassen/Interfaces zu finden,
+            was erfreulicherweise zu kürzeren sprachlichen Konstrukten führt
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+    public static void main(String[] args) {
+        final List&lt;Pair&gt; generateDemoValues = new PairListGenerator(){}.generateDemoValues();
+
+        //pre JDK8
+        for (final Pair generateDemoValue : generateDemoValues) {
+            System.out.println(generateDemoValue);
+        }
+
+        //long version
+        generateDemoValues.stream().forEach(v -&gt; System.out.println(v) );
+
+        //short version
+        generateDemoValues.stream().forEach(System.out::println);
+        generateDemoValues.stream().forEachOrdered(System.out::println);
+
+        final Consumer&lt;? super Pair&gt; consumer = System.out::println;
+        generateDemoValues.stream().forEachOrdered(consumer);
+    }
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>map (1/2)</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Die Methode map(lambda) erzeugt einen neuen Stream bestehend aus der Summe aller
+            Transformationen der Elemente des Quell-Streams. Auch hier wieder ist das Argument
+            ein Lambda. Das bedeutet, dass der Zielstream bis auf die funktionale Kopplung
+            nichts mit dem Quellstream gemeinsam haben muss.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+    private static Stream&lt;DemoElement&gt; getDemoElementStream(List&lt;Pair&gt; generateDemoValues) {
+        //map from Point to DemoElements
+        return generateDemoValues.stream().map(v -&gt; {
+            final String value = v.getValue();
+            final DemoElement d = new DemoElement();
+            d.setDatum(new Date());
+            d.setValue(Base64.getEncoder().encodeToString(value.getBytes()));
+            return d;
+        });
+    }
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>map (2/2)</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+        <pre class="prettyprint" data-lang="java">
+    public static void main(String[] args) {
+        final List&lt;Pair&gt; generateDemoValues = new PairListGenerator(){}.generateDemoValues();
+        final Stream&lt;DemoElement&gt; demoElementStream = getDemoElementStream(generateDemoValues);
+
+
+        final Stream&lt;String&gt; stringStream = getDemoElementStream(generateDemoValues)
+           <b>.map(v -&gt; v.getValue());</b>
+        final Stream&lt;String&gt; stringStreamShort = getDemoElementStream(generateDemoValues)
+           <b>.map(DemoElement::getValue);</b>
+
+        //map from Point to DemoElements to Strings
+        final List&lt;String&gt; stringList = generateDemoValues.stream().map(v -&gt; {
+            final String value = v.getValue();
+            final DemoElement d = new DemoElement();
+            d.setDatum(new Date());
+            d.setValue(Base64.getEncoder().encodeToString(value.getBytes()));
+            return d;
+        })<b>
+        .map(DemoElement::getValue).collect(Collectors.toList());
+        </b>
+    }
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>filter</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Wie die Methode map(lambda), erzeugt die Methode filter(Lambda) ebenfalls einen neuen Stream.
+            Aus der Menge der Quellelemente werden die für die weiteren Schritte
+            benötigten Elemente herausgefiltert.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+    public static void main(String[] args) {
+        final List&lt;Pair&gt; generateDemoValues = new PairListGenerator(){}.generateDemoValues();
+        final Stream&lt;Pair&gt; filteredPairStream = generateDemoValues.stream().filter(v -&gt; v.getId() % 2 == 0);
+    }
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>findFirst</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p> Immer wieder gibt es eine Menge von Elementen, deren Reihenfolge nicht definiert,
+            die Anzahl unbestimmt, aber genau ein Element dieser Menge mit bestimmten
+            Eigenschaften zu entnehmen ist. Was auf der Datenbank dank SQL
+            kein Problem in den meisten Fällen darstellt, kann auf der imperativen
+            Seite schon mal zu einem längeren Stück Quelltext führen.
+            Die Methode findFirst() liefert das erste Element aus dem Stream.
+            Auf den ersten Blick eine triviale Methode, so mehr erfreut man sich beim
+            zweiten Blick. Der Rückgabewert ist ein Optional im Falle eine leeren Streams ein leeres Optional.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+         final List&lt;String&gt; demoValues = Arrays.asList(&quot;AB&quot;, &quot;AAB&quot;, &quot;AAAB&quot;, &quot;AAAAB&quot;, &quot;AAAAAB&quot;);
+         final String value = demoValues
+                .stream()
+                .filter(o -&gt; o.contains(&quot;AAA&quot;))
+                .findFirst().orElse(&quot;noop &quot;);
+        System.out.println(&quot;value = &quot; + value);
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>reduce</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Bei den bisherigen Betrachtungen wurden ausschließlich Transformationen betrachtet,
+            die eine Abbildung von n auf m darstellten. Die Methode reduce((v1,v2)-&gt;) jedoch
+            ermöglicht die Abbildung von n Elementen auf ein finales Element.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+        final List&lt;String&gt; demoValues = Arrays.asList(&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;);
+        System.out.println(demoValues.stream()
+            .reduce(String::concat));
+
+        System.out.println(demoValues.stream()
+            .reduce(&quot;X_&quot;, (v1,v2)-&gt;{
+                System.out.println(&quot;v1 -&gt; &quot; + v1);
+                System.out.println(&quot;v2 -&gt; &quot; + v2);
+                return v1.concat(v2)+&quot;_&quot;;
+            }));
+        System.out.println(demoValues.parallelStream()
+            .reduce(&quot;X_&quot;, (v1,v2)-&gt;{
+        //                    System.out.println(&quot;v1 -&gt; &quot; + v1);
+        //                    System.out.println(&quot;v2 -&gt; &quot; + v2);
+                final String result = v1.concat(v2) + &quot;_&quot;;
+                System.out.println(&quot;v1 &quot; + v1 + &quot; plus v2_ &quot; + v2 + &quot;_ =&gt; &quot; + result);
+                return result;
+            }));
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>reduce</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <pre class="prettyprint" data-lang="java">
+        System.out.println(demoValues.stream()
+            .reduce(&quot;X_&quot;, (v1,v2)-&gt;{
+                System.out.println(&quot;v1 -&gt; &quot; + v1);
+                System.out.println(&quot;v2 -&gt; &quot; + v2);
+                return v1.concat(v2)+&quot;_&quot;;
+            }));
+        </pre>
+        <p>
+            v1 -> X_ <br/>
+            v2 -> A  <br/>
+            v1 -> X_A_ <br/>
+            v2 -> B  <br/>
+            v1 -> X_A_B_ <br/>
+            v2 -> C  <br/>
+            v1 -> X_A_B_C_ <br/>
+            v2 -> D  <br/>
+            v1 -> X_A_B_C_D_ <br/>
+            v2 -> E <br/>
+            X_A_B_C_D_E_ <br/>
+        </p>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>reduce</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <pre class="prettyprint" data-lang="java">
+        System.out.println(demoValues.parallelStream()
+            .reduce(&quot;X_&quot;, (v1,v2)-&gt;{
+                final String result = v1.concat(v2) + &quot;#&quot;;
+                System.out.println(&quot;v1 &quot; + v1 + &quot; plus v2_ &quot; + v2 + &quot;_ =&gt; &quot; + result);
+                return result;
+            }));
+        </pre>
+        <p>
+            v1 X_ plus v2_ C_ => X_C#<br/>
+            v1 X_ plus v2_ A_ => X_A#<br/>
+            v1 X_ plus v2_ D_ => X_D#<br/>
+            v1 X_ plus v2_ B_ => X_B#<br/>
+            v1 X_ plus v2_ E_ => X_E#<br/>
+            v1 X_A# plus v2_ X_B#_ => X_A#X_B##<br/>
+            v1 X_D# plus v2_ X_E#_ => X_D#X_E##<br/>
+            v1 X_C# plus v2_ X_D#X_E##_ => X_C#X_D#X_E###<br/>
+            v1 X_A#X_B## plus v2_ X_C#X_D#X_E###_ => X_A#X_B##X_C#X_D#X_E####<br/>
+            X_A#X_B##X_C#X_D#X_E####<br/>
+
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>limit/skip</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Streams können undefiniert lang sein. Das bedeutet, dass im Extremfall ein Stream kein Ende hat.
+            Es ist also manchmal sinnvoll, Streams nur bis zu einer bestimmten Länge abzuarbeiten, oder nur
+            eine bestimmte Menge von Ergebnissen zu sammeln, da der Rest nicht mehr für die nachfolgende Logik
+            zu verwenden ist. Die Methode limit(count) ist genau dafür gedacht.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+        final List&lt;Integer&gt; demoValues
+                = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        //limit the input
+        System.out.println(demoValues.stream().limit(4).collect(Collectors.toList()));
+
+        //limit the result
+        System.out.println(demoValues
+                .stream().filter((v) -&gt; v &gt; 4).limit(4).collect(Collectors.toList()));
+
+        System.out.println(demoValues
+                .stream().skip(4).collect(Collectors.toList()));
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>distinct</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Aus dem Bereich SQL kennt man den Befehl distinct, um eine Menge von Werten auf
+            jeweils nur ein Exemplar eines Wertes zu reduzieren. Also das Erzeugen
+            einer unique – Menge. Genau dasselbe erledigt die Methode distinct().
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+        // example result:
+        // [77, 79, 81, 95, 43, 10, 53, 48, 74, 68, 60, 86, 83, 24, 57, 28, 8,
+        //  85, 70, 66, 20, 14, 97, 73, 22, 36, 40, 39, 32, 19, 41, 67, 25, 88]
+        final Random random = new Random();
+        System.out.println(
+                Stream.generate(() -&gt; random.nextInt(100))
+                        .limit(40)
+                        .distinct()
+                        .collect(Collectors.toList())
+        );
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>min/max</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Die Methoden min(Comparator) und max(Comparator) liefern aus der Menge
+            der Werte im Stream das Minimum, bzw das Maximum.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+        final List&lt;Integer&gt; demoValues
+                = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        //find the maximum
+        System.out.println(demoValues
+                .stream().max(Integer::compareTo)
+        );
+        //find the BUG ;-)
+        System.out.println(demoValues
+                .stream().min((v1, v2) -&gt; Integer.compare(v2, v1))
+        );
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>allMatch/anyMatch/noneMatch</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Die Methoden allMatch(&lt;Predicate&gt;), anyMatch(&lt;Predicate&gt;), none-Match(&lt;Predicate&gt;) liefern ein boolean zur&uuml;ck.
+            allMatch wenn die definierte Bedingung bei genau allen Elementen zutrifft,
+            anyMatch wenn einige Elemente der Bedingung entsprechen (mind 2 in diesem Beispiel)
+            noneMatch wenn kein einziges Element der Bedingung entspricht.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+    public static final List&lt;Integer&gt; demoValues = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    private static Stream&lt;Integer&gt; getStream() {return demoValues.stream();}
+
+    static final Function&lt;Integer, Integer&gt; f = (e) -&gt; {
+        System.out.println(&quot;e = &quot; + e);
+        return e;
+    };
+    public static void main(String[] args) {
+        // true, some are matching
+        System.out.println(&quot;anyMatch &quot; + getStream().map(f).anyMatch((v) -&gt; v % 2 == 0));
+        //false, not all are matching
+        System.out.println(&quot;allMatch &quot; + getStream().map(f).allMatch((v) -&gt; v % 2 == 0));
+        //false, not all are NOT matching
+        System.out.println(&quot;noneMatch &quot; + getStream().map(f).noneMatch((v) -&gt; v % 2 == 0));
+        //5 matching the filter, 2,4,6,8,10
+        System.out.println(&quot;count &quot; + getStream().map(f).filter((v) -&gt; v % 2 == 0).count());
+    }
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>parallel / sequenziell</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Die beiden letzten Methoden die wir uns hier ansehen werden sind parallel() und sequential().
+            Die Methoden die wiederum einen Stream zur&uuml;ckliefern k&ouml;nnen so explizit in eine serielle oder parallele Version geschaltet werden.
+        </p>
+        <p>
+        <pre class="prettyprint" data-lang="java">
+        final List&lt;Integer&gt; demoValues
+                = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        System.out.println(demoValues.stream()  //seriell
+                .map((m1) -&gt; m1)
+                .parallel()
+                .map((m2) -&gt; m2)
+                .sequential() //seriell
+                .collect(Collectors.toList()));
+    }
+        </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Core Methods - <b>Fazit</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            Schon diese wenigen Basis-Methoden erm&ouml;glichen einem nach sehr kurzer Einarbeitung Streams
+            recht effizient und effektiv einzusetzen. Zur &Uuml;bung kann ich empfehlen bestehende Quelltexte
+            in Konstrukte mit Streams umzuformen. Dabei wird sich zeigen, dass mit dieser Transformation
+            eine starke Code-Reduktion einhergeht. An so mancher Stelle kann man dank der Streams auch
+            Teilaufgaben parallelisieren, was zu einer h&ouml;heren Auslastung der vorhandenen modernen CPU-Architekturen f&uuml;hrt.
+        </p>
+    </article>
+</slide>
+
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+
+<!--Pause-->
+<slide class="segue dark nobackground">
+    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <aside class="gdbar">codecentric AG</aside>
+    <hgroup class="auto-fadein">
+        <h2>Pause...</h2>
+        <h3>may the coffee be with us!</h3>
+        <h4>Dauer 5min </h4>
+    </hgroup>
+    <article class="flexbox vright">
+        <span><img src="images/fun/joda_waiting.jpg"></span>
+    </article>
+</slide>
+
+
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--Kapitel 3 - Streams v Threads v Serial-->
+<slide>
+    <hgroup>
+        <h2>Java 8 - Streams</h2>
+        <h3>Streams v Threads v Serial</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Wir werden nun ein Beispiel durchgehen, in dem wir eine Aufgabe einmal klassisch seriell,
+            dann mittels Threads und zum Schluss mit Streams realisieren.
+            Wie groß sind die Unterschiede in der Codekomplexität, welche Performanceunterschiede gibt es?
+        </p>
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <li>Die Aufgabe</li>
+            <li>Seriell</li>
+            <li>Threads</li>
+            <li>Streams</li>
+            <li>Fazit</li>
+        </ul>
+    </article>
+</slide>
+
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Die Aufgabe</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Beginnen wir mit einem einfachen Interface: Der Worker ,
+            in dem zwei Methoden definiert werden die zur synthetischen
+            Lasterzeugung verwendet werden. Ziel hier ist es, zuerst eine Matrix
+            mit Stützstellen aufzubauen <b>(generateDemoValueMatrix)</b>,
+            die danach mittels Splines interpoliert wird <b>(generateInterpolatedValues)</b>.
+        </p>
+        <p>Der erste Teil ist die Erzeu-gung einer Wertereihe <b>(DemoValueGenerator)</b> zur Darstellung
+            der Stützstellen. Die Implementierung wurde als Interface mit default – Methode gewählt,
+            was einer JDK8 Notation entspricht.
+            Die Implementierung selbst erfolgte an der Stelle noch ohne Streams.
+        </p>
+        <p>
+            Der zweite Teil ist die Berechnung der interpolierten Werte <b>(WorkLoadGenerator)</b>,
+            was hier zum einen der Lasterzeugung dient und zum anderen
+            als Beispiel zum Einbinden von ThirdParty-Code verwendet wird.
+        </p>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Die Aufgabe / Worker</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <p>
+            <pre class="prettyprint" data-lang="java">
+        public interface Worker {
+
+            public static final int ANZAHL_KURVEN = 200;
+            public static final int ANZAHL_MESSWERTE = 10;
+            public static final int MAX_GENERATED_INT = 100;
+
+            public abstract List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix();
+
+            public abstract List&lt;List&lt;Double&gt;&gt;
+                generateInterpolatedValues(List&lt;List&lt;Integer&gt;&gt; baseValues);
+        }
+            </pre>
+            </p>
+        </article>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Seriell</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+public class WorkerSerial implements Worker {
+    @Override
+    public List&lt;List&lt;Double&gt;&gt;
+    generateInterpolatedValues(List&lt;List&lt;Integer&gt;&gt; baseValues) {
+        final WorkLoadGenerator generator = new WorkLoadGenerator();
+        final List&lt;List&lt;Double&gt;&gt; result = new ArrayList&lt;&gt;();
+        for (final List&lt;Integer&gt; valueList : baseValues) {
+            final List&lt;Double&gt; doubleList = generator.generate(valueList);
+            result.add(doubleList);
+        }
+        return result;
+    }
+    private DemoValueGenerator valueGenerator = new DemoValueGenerator(){};
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        final List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; ANZAHL_KURVEN; i++) {
+            final List&lt;Integer&gt; demoValuesForY
+                = valueGenerator.generateDemoValuesForY();
+            result.add(demoValuesForY);
+        }
+        return result;
+    }
+}
+            </pre>
+        </article>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Threads (1/3)</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+@Override
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        final List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        final List&lt;Task&gt; taskList = new ArrayList&lt;&gt;();
+        for(int i = 0; i&lt; ANZAHL_KURVEN; i++){
+            taskList.add(new Task());
+        }
+        for (final Task task : taskList) {
+            task.run();
+        }
+        for (final Task task : taskList) {
+            try {
+                task.join();
+                result.add(task.result);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+           </pre>
+        </article>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Threads (2/3)</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+@Override
+    public List&lt;List&lt;Double&gt;&gt;
+    generateInterpolatedValues(List&lt;List&lt;Integer&gt;&gt; baseValues) {
+        final List&lt;List&lt;Double&gt;&gt; result = new ArrayList&lt;&gt;();
+        final List&lt;TaskInterpolate&gt; taskList = new ArrayList&lt;&gt;();
+        for (final List&lt;Integer&gt; baseValue : baseValues) {
+            final TaskInterpolate taskInterpolate = new TaskInterpolate();
+            taskInterpolate.values.addAll(baseValue);
+            taskList.add(taskInterpolate);
+        }
+        for (final TaskInterpolate task : taskList) {
+            task.run();
+        }
+        for (final TaskInterpolate task : taskList) {
+            try {
+                task.join();
+                result.add(task.result);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        return result;
+    }
+            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Threads (3/3)</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+ public static class Task extends Thread {
+        public List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
+        private DemoValueGenerator valueGenerator = new DemoValueGenerator(){};
+
+        @Override
+        public void run() {
+            result.addAll(valueGenerator.generateDemoValuesForY());
+        }
+    }
+    public static class TaskInterpolate extends Thread {
+        public final List&lt;Integer&gt; values = new ArrayList&lt;&gt;();
+        public final List&lt;Double&gt; result = new ArrayList&lt;&gt;();
+
+        private final WorkLoadGenerator generator = new WorkLoadGenerator();
+
+        @Override
+        public void run() {
+            result.addAll(generator.generate(values));
+        }
+    }
+            </pre>
+        </article>
+    </article>
+</slide>
+
+<!--Uebung-->
+<slide class="fill nobackground" style="background-image: url(images/fun/stormtroopers-star-wars_321787.jpg)">    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <!--<aside class="gdbar"><img src="images/logo_siteos.gif"></aside>-->
+    <hgroup class="auto-fadein">
+        <h2>Übung..</h2>
+        <h3>Lösung mittels Streams</h3>
+        <h4>Dauer 15min </h4>
+    </hgroup>
+    <!--<article class="flexbox vright">-->
+        <!--<span><img src="images/fun/stormtroopers-star-wars_321787.jpg"></span>-->
+    <!--</article>-->
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Streams (Lösung 1/3)</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+public class WorkerParallelStreams implements Worker{
+
+    public List&lt;Integer&gt; generateDemoValuesForY(){
+        final Random random = new Random();
+        <b>return Stream
+                .generate(() -&gt; random.nextInt(MAX_GENERATED_INT))
+                .limit(ANZAHL_MESSWERTE)
+                .collect(Collectors.toList());  </b>
+    }
+    //..
+}
+            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Streams (Lösung 2/3)</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+public class WorkerParallelStreams implements Worker{
+
+    @Override
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix(){
+        <b>return Stream
+                .generate(this::generateDemoValuesForY)
+                .limit(ANZAHL_KURVEN)
+                .collect(Collectors.toList());</b>
+    }
+}
+            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Streams (Lösung 3/3)</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+public class WorkerParallelStreams implements Worker{
+
+    @Override
+    public List&lt;List&lt;Double&gt;&gt; generateInterpolatedValues(List&lt;List&lt;Integer&gt;&gt; baseValueMatrix) {
+        <b>baseValueMatrix.parallelStream()
+                .map(v -&gt; {
+                    final WorkLoadGenerator generator
+                        = new WorkLoadGenerator();
+                    return generator.generate(v);
+                })
+                .collect(Collectors.toList());  </b>
+        return baseValueMatrix;
+    }
+}
+            </pre>
+        </article>
+    </article>
+</slide>
+
+<!--Uebung-->
+<slide class="fill nobackground" style="background-image: url(images/fun/stormtroopers-star-wars_321787.jpg)">
+    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <hgroup class="auto-fadein">
+        <h2>Übung..</h2>
+        <h3>Lösung mittels Streams und default Methoden</h3>
+        <h4>Dauer 5min </h4>
+    </hgroup>
+</slide>
+<!--Uebung-->
+<slide class="fill nobackground" style="background-image: url(images/fun/stormtroopers-star-wars_321787.jpg)">
+    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <hgroup class="auto-fadein">
+        <h2>Ergebnis</h2>
+        <h3>Vergleich der Lösungungen</h3>
+        <!--<h4>Dauer 5min </h4>-->
+    </hgroup>
+</slide>
+
+
+<slide class="fill nobackground" style="background-size: contain;background-image: url(images/Serial_v_Thread_v_Streams.jpg)">
+    <hgroup>
+        <h2>Serial v Threads v Streams</h2>
+    </hgroup>
+
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams v Threads v Serial - <b>Fazit</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+           <p>
+               Zusammenfassend kann man sagen, dass die Kombination von Streams
+               und den weiteren neuen Sprachelementen von dem JDK8 zu einer
+               deutlichen Codereduktion führen können.  </p>
+            <p>
+               Schon einfache Bestandteile können parallelisiert werden,
+               ohne das der Entwickler sich mit den sonst notwendigen
+               Konstrukten wie z.B. Threads auseinandersetzt.
+
+             <p>
+               Es sollte
+               allerdings auch hier beachtet werden, ganz ohne Verständnis für
+               Nebenläufigkeit geht es auch hier nicht. Nicht zwangsläufig
+               ist eine parallele Implementierung auch die effizienteste Implementierung,
+               geschweige denn semantisch dieselbe.
+           </p>
+        </article>
+    </article>
+</slide>
+
+
+
+
+
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+
+<!--Pause-->
+<slide class="segue dark nobackground">
+    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <aside class="gdbar">codecentric AG</aside>
+    <hgroup class="auto-fadein">
+        <h2>Pause...</h2>
+        <h3>may the coffee be with us!</h3>
+        <h4>Dauer 5min </h4>
+    </hgroup>
+    <article class="flexbox vright">
+        <span><img src="images/fun/joda_waiting.jpg"></span>
+    </article>
+</slide>
+
+
+
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+
+<!--Kapitel 4 JavaFX Beispiel -->
+<slide >
+    <hgroup>
+        <h2>Java 8 - Streams</h2>
+        <h3>JavaFX Beispiel</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <li>Hole (generiere) die Reihe der Messwerte</li>
+            <li>Berechne die interpolierten Werte</li>
+            <li>Erzeuge die graphischen Elemente</li>
+            <li>Befülle das Line-Chart</li>
+            <li>Fazit</li>
+        </ul>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1a/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        final List&lt;List&lt;Integer&gt;&gt; resultMatrix = new ArrayList&lt;&gt;();
+        final Random random = new Random();
+        for(int anzahlKurven = 0; anzahlKurven &lt;ANZAHL_KURVEN; anzahlKurven++){
+            final List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
+            for (int i = 0; i &lt; 10; i++) {
+                final int nextInt = random.nextInt(100);
+                result.add(nextInt);
+            }
+            resultMatrix.add(result);
+        }
+        return resultMatrix;
+    }
+            </pre>
+        </article>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1b/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        final List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        for(int anzahlKurven = 0; anzahlKurven &lt;ANZAHL_KURVEN; anzahlKurven++){
+            final List&lt;Integer&gt; demoValuesForY = generateDemoValuesForY();
+            result.add(demoValuesForY);
+        }
+        return result;
+    }
+    public List&lt;Integer&gt; generateDemoValuesForY() {
+        final Random random = new Random();
+        final List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
+        for (int i = 0; i &lt; 10; i++) {
+            final int nextInt = random.nextInt(100);
+            result.add(nextInt);
+        }
+        return result;
+    }            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1c/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        return Stream
+                .generate(this::generateDemoValuesForY)
+                .limit(ANZAHL_KURVEN)
+                .collect(Collectors.toList());
+    }
+    public List&lt;Integer&gt; generateDemoValuesForY(){
+        final Random random = new Random();
+        return Stream
+                .generate(() -&gt; {
+                    return random.nextInt(100);
+                })
+                .limit(10)
+                .collect(Collectors.toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1d/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        return Stream
+                .generate(this::generateDemoValuesForY)
+                .limit(ANZAHL_KURVEN)
+                .collect(Collectors.toList());
+    }
+    public List&lt;Integer&gt; generateDemoValuesForY(){
+        final Random random = new Random();
+        return Stream
+                .generate(() -&gt; random.nextInt(100))
+                .limit(10)
+                .collect(Collectors.toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1e/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        return Stream
+                .generate(this::generateDemoValuesForY)
+                .limit(ANZAHL_KURVEN)
+                .collect(Collectors.toList());
+    }
+    public List&lt;Integer&gt; generateDemoValuesForY(){
+        return new Random()
+                .ints(0, 100)
+                .limit(10)
+                .boxed()
+                .collect(Collectors.toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1f/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        final Random random = new Random();
+        return Stream.generate(
+                    () -&gt; Stream.generate(
+                            () -&gt; random.nextInt(100))
+                            .limit(10)
+                            .collect(Collectors.toList())
+                )
+                .limit(ANZAHL_KURVEN)
+                .collect(Collectors.toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1g/5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        return Stream.generate(
+                () -&gt; new Random()
+                        .ints(0, 100)
+                        .limit(10)
+                        .boxed()
+                        .collect(Collectors.toList())
+                ).limit(ANZAHL_KURVEN)
+                .collect(Collectors.toList());
+    }            </pre>
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        return generate(() -&gt; new Random()
+                .ints(0, 100)
+                .limit(10).boxed().collect(toList())
+        ).limit(ANZAHL_KURVEN).collect(toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1 Vergleich / 5</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        final List&lt;List&lt;Integer&gt;&gt; resultMatrix = new ArrayList&lt;&gt;();
+        final Random random = new Random();
+        for(int anzahlKurven = 0; anzahlKurven &lt;ANZAHL_KURVEN; anzahlKurven++){
+            final List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
+            for (int i = 0; i &lt; 10; i++) {
+                final int nextInt = random.nextInt(100);
+                result.add(nextInt);
+            }
+            resultMatrix.add(result);
+        }
+        return resultMatrix;
+    }            </pre>
+            <pre class="prettyprint" data-lang="java">
+    public List&lt;List&lt;Integer&gt;&gt; generateDemoValueMatrix() {
+        return generate(() -&gt; new Random()
+                .ints(0, 100)
+                .limit(10).boxed().collect(toList())
+        ).limit(ANZAHL_KURVEN).collect(toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+
+<!--<slide>-->
+    <!--<hgroup>-->
+        <!--&lt;!&ndash;<h2>Java 8 - Streams</h2>&ndash;&gt;-->
+        <!--<h3>JavaFX Beispiel - <b>2a/5</b></h3>-->
+    <!--</hgroup>-->
+    <!--<article>-->
+        <!--<article class="smaller">-->
+            <!--<pre class="prettyprint" data-lang="java">-->
+<!--private UnivariateFunction createInterpolateFunction(final List&lt;Integer&gt; values) {-->
+        <!--final double[] valueArrayX = new double[values.size()];-->
+        <!--for (int i = 0; i &lt; valueArrayX.length; i++) {-->
+            <!--valueArrayX[i] = (double) i * STEP_SIZE;-->
+        <!--}-->
+
+        <!--final double[] valueArrayY = new double[values.size()];-->
+        <!--int i = 0;-->
+        <!--for (final Integer value : values) {-->
+            <!--valueArrayY[i] = (double) value.intValue();-->
+            <!--i = i + 1;-->
+        <!--}-->
+
+        <!--final UnivariateInterpolator interpolator = new SplineInterpolator();-->
+        <!--final UnivariateFunction function = interpolator.interpolate(valueArrayX, valueArrayY);-->
+        <!--return function;-->
+<!--}            </pre>-->
+        <!--</article>-->
+    <!--</article>-->
+<!--</slide>-->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>1/2</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+private List&lt;List&lt;Double&gt;&gt; getValuesForSeries() {
+        final List&lt;List&lt;Integer&gt;&gt; demoValueMatrix = generateDemoValueMatrix();
+        return demoValueMatrix <b>
+                .parallelStream()</b>
+                .map(v -&gt; {
+                    final UnivariateFunction interpolateFunction = createInterpolateFunction(v);
+                    //baue Kurve auf
+                    final int anzahlValuesInterpolated = (v.size() - 1) * STEP_SIZE;
+                    return  IntStream
+                            .rangeClosed(0, anzahlValuesInterpolated)<b>.parallel()</b>.boxed()
+                            .map(interpolateFunction::value)
+                            .collect(toList());
+                })
+                .collect(toList());
+    }            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>2/2</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <pre class="prettyprint" data-lang="java">
+    private List&lt;XYChart.Series&gt; generateNextSeries() {
+        final List&lt;XYChart.Series&gt; chartSeries = getValuesForSeries()<b>
+                .parallelStream()</b>
+                .map(v -&gt; {<b>
+                final XYChart.Series nextSeries = new XYChart.Series();
+                IntStream.range(0,v.size()).forEach((i)-&gt;{
+                final XYChart.Data data = new XYChart.Data(i, v.get(i));
+                nextSeries.getData().add(data);
+                });</b>
+                    return nextSeries;
+                }).collect(toList());
+        return chartSeries;
+    }            </pre>
+        </article>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>JavaFX Beispiel - <b>Fazit</b></h3>
+    </hgroup>
+    <article>
+        <article class="smaller">
+            <p>Paralleles Erzeugen der GUI Elemente hat in diesem Beispiel einen spürbaren SpeedUP!</p>
+        </article>
+    </article>
+</slide>
+
+
+
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--##################################################################################################-->
+<!--Kapitel 5 Streams Pattern Beispiele -->
+<slide>
+    <hgroup>
+        <h2>Java 8 - Streams</h2>
+        <h3>Streams Pattern Beispiele</h3>
+    </hgroup>
+    <article class="smaller">
+        <p>folgendes erwartet uns: </p>
+        <ul class="build">
+            <!--<li>Primzahl</li>-->
+            <li>Fibonacci</li>
+            <li>Matrix</li>
+            <!--<li>Übung</li>-->
+            <li>Random</li>
+            <li>Fazit</li>
+        </ul>
+    </article>
+</slide>
+
+<!--<slide>-->
+    <!--<hgroup>-->
+        <!--&lt;!&ndash;<h2>Java 8 - Streams</h2>&ndash;&gt;-->
+        <!--<h3>Streams Pattern Beispiele - <b>Primzahl</b></h3>-->
+    <!--</hgroup>-->
+    <!--<article class="smaller">-->
+        <!--<pre class="prettyprint" data-lang="java">-->
+ <!--public static void main(String[] args) {-->
+        <!--for(int i = 0; i&lt;1_000_000; i++){-->
+            <!--final boolean b = isPrime1(i) != isPrime2(i);-->
+            <!--if(b) System.out.println(&quot;ungleiches Ergebnis =  &quot; + i);-->
+    <!--}-->
+    <!--}-->
+    <!--public static boolean isPrime1(int n) {-->
+        <!--if (n &lt;= 1) return false;-->
+        <!--if (n == 2) return true;-->
+        <!--return n &gt;= 2 &amp;&amp; IntStream-->
+                <!--.rangeClosed(2, (int) (Math.sqrt(n)))  //for(int i=3;i*i&lt;=n;i+=2)-->
+                <!--.allMatch((d) -&gt; n % d != 0);          //if(n%i==0) return false-->
+    <!--}-->
+
+    <!--public static boolean isPrime2(int n) {-->
+        <!--if (n &lt;= 1) return false;-->
+        <!--if (n == 2) return true;-->
+        <!--if (n % 2 == 0) return false;-->
+        <!--for (int i = 3; i &lt;= Math.sqrt(n) + 1; i = i + 2) {-->
+            <!--if (n % i == 0) return false;-->
+    <!--}-->
+        <!--return true;-->
+    <!--}-->
+        <!--</pre>-->
+
+    <!--</article>-->
+<!--</slide>-->
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams Pattern Beispiele - <b>Fibonacci</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <pre class="prettyprint" data-lang="java">
+    public static void main(String[] args) {
+        makeFibStream(10).forEachOrdered(System.out::println);
+    }
+    public static Stream&lt;Long&gt; makeFibStream() {
+        return(<b>Stream.generate(new FibonacciSupplier())</b>);
+    }
+    public static Stream&lt;Long&gt; makeFibStream(int numFibs) {
+        return(makeFibStream().limit(numFibs));
+    }
+    public static List&lt;Long&gt; makeFibList(int numFibs) {
+        return(makeFibStream(numFibs).collect(Collectors.toList()));
+    }
+    public static class <b>FibonacciSupplier implements Supplier&lt;Long&gt;</b> {
+        private long previous = 0;
+        private long current = 1;
+        @Override
+        public Long get() {
+            long next = current + previous;
+            previous = current;
+            current = next;
+            return(previous);
+        }
+    }
+        </pre>
+    </article>
+</slide>
+
+<slide class="fill nobackground" style="background-image: url(images/fun/lego-stormtroopers.jpg)">
+    <!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <!--<aside class="gdbar"><img src="images/logo_siteos.gif"></aside>-->
+    <hgroup class="auto-fadein">
+        <h2>Ad hoc Übung..</h2>
+        <h3>Finde die Zahl 66</h3>
+        <h4>Dauer 15min :-) </h4>
+    </hgroup>
+            <pre class="prettyprint" data-lang="java">
+        final List&lt;List&lt;Integer&gt;&gt; matrix = new ArrayList&lt;&gt;();
+        matrix.add(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+        matrix.add(Arrays.asList(1,2,3,4,5,66,7,8,9)); //hier eine 66
+        matrix.add(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9)); </pre>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams Pattern Beispiele - <b>Lösung</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Finde die Zahl 66</p>
+        <p>
+            <pre class="prettyprint" data-lang="java">
+    public static void main(String[] args) {
+        final List&lt;List&lt;Integer&gt;&gt; matrix = new ArrayList&lt;&gt;();
+        matrix.add(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+        matrix.add(Arrays.asList(1,2,3,4,5,66,7,8,9)); //hier eine 66
+        matrix.add(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+        matrix.forEach(System.out::println);
+
+        final Integer s = matrix.stream()
+        <b>
+                .map(l -&gt; l.stream()
+                        .filter(v -&gt; v.equals(66))
+                        .findFirst().orElse(null))
+                .filter(f -&gt; f != null)
+                .findFirst().orElse(null);
+        </b>
+        System.out.println(&quot;s = &quot; + s);
+    }
+    </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams Pattern Beispiele - <b>Random</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>
+            <pre class="prettyprint" data-lang="java">
+            new Random()
+                    .doubles()
+                    .boxed()
+                    .map((d) -&gt; {
+                        final TemperaturSensorValue v = new TemperaturSensorValue();
+                        v.setDate(new Date());
+                        v.setSensorID(&quot;testID&quot;);
+                        v.setValue(d);
+                        return v;
+                    })
+                    .limit(1_000_000)
+                    .forEach((t) -&gt; {
+                        try {
+                            repo.create(t);
+                        } catch (ArangoDb4JException e) {
+                            e.printStackTrace();
+                        }
+                    });
+    </pre>
+        </p>
+    </article>
+</slide>
+<slide>
+    <hgroup>
+        <!--<h2>Java 8 - Streams</h2>-->
+        <h3>Streams Pattern Beispiele - <b>Fazit</b></h3>
+    </hgroup>
+    <article class="smaller">
+        <p>Bei der Verwendung von Streams stellen sich unter anderem folgende Fragen.</p>
+
+        <p>
+        <ul>
+            <li>
+                Ist eine Nebenläufigkeit gewünscht oder nicht? Wenn ja, dann sind Streams mittels Verwendung von
+                parallelStream()
+                in vielen Fällen ein einfacher und schneller Ansatz.
+            </li>
+            <li>Soll die Verschachtelung des Kontrollflusses gemindert werden? Hier ist es abhängig von
+                den Konstrukten innerhalb der Fallunterscheidun-gen selbst. Mit leichten Veränderungen
+                lassen sich mittels Streams recht oft aussagekräftigere Konstrukte aufbauen, die auf
+                lange Sicht zu einer besseren Wartbarkeit führen. Ob sich das bei Alt-Projekten immer
+                lohnt muss also im Einzelfall endschieden werden.
+            </li>
+            <li>
+                Sind mathematische Funktionen abzubilden? Hier kann man in vielen Fällen mittels Streams
+                schneller zum Erfolg kommen, ohne gleich Scala oder andere funktionale Sprachen in das Projekt zu integrieren.
+            </li>
+        </ul>
+        </p>
+        <p>
+            Alles in Allem sind Streams eine sehr effektive Unterstützung bei der täglichen Arbeit mit Java.
+            Gerade durch den generischen Ansatz ist bei typischen Geschäftsanwendungen schon eine
+            angenehme Erleichterung zu realisieren. Die Einarbeitung in Streams sollte normalerweise
+            innerhalb von 2-3 Arbeitstagen zu spürbaren Ergebnissen führen.
+        </p>
+
+        <p></p>
+    </article>
+</slide>
+
+
+
+
+<!--<slide class="segue dark nobackground">-->
+    <!--<!--<slide class="fill nobackground" style="background-image: url(images/fun/joda_face.jpg)">-->
+    <!--<aside class="gdbar"><img src="images/logo_siteos.gif"></aside>-->
+    <!--<hgroup class="auto-fadein">-->
+        <!--<h2>Pause...</h2>-->
+        <!--<h3>may the coffee be with us!</h3>-->
+    <!--</hgroup>-->
+    <!--<article class="flexbox vcenter">-->
+    <!--<article class="flexbox vright">-->
+        <!--<span><img src="images/fun/joda_fight.jpg"></span>-->
+    <!--</article>-->
+
+<slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vcenter">
+        <h2>Java 8 Streams</h2>
+        <h3>eBook - 4,99.- Amazon</h3>
+        <span><img src="images/Java_8_Streams.jpg" style="zoom: 25%"></span>
+    </article>
+</slide>
+<slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vcenter">
+        <h2>Book about Reflection</h2>
+        <h3>my book with Dr, Heinz Kabutz</h3>
+        <h3>.. soon</h3>
+        <p>CDI und Reflection... ein teuflisches Paar</p>
+        <p>z.B. ...dynamic static proxies... ;-)</p>
+    </article>
+</slide>
+
+<!--next JUGS-->
+<slide class="thank-you-slide segue nobackground">
+    <article class="flexbox vcenter">
+        <h2>IoT für Java-Entwickler</h2>
+        <h3>..soon</h3>
+        <span><img src="images/IoT%20fuer%20Java-Entwickler_1400x.jpg" style="zoom: 25%"></span>
+    </article>
+</slide>
+
+
+
+<!--next JUGS-->
+<!--<slide class="thank-you-slide segue nobackground">-->
+    <!--&lt;!&ndash;<aside class="gdbar right"><img src="images/logo_sru.png"></aside>&ndash;&gt;-->
+    <!--<article class="flexbox vleft auto-fadein">-->
+        <!--<h2>&lt;last JUG meetings..&gt;</h2>-->
+        <!--<br/>-->
+        <!--<div>-->
+            <!--<ul>-->
+                <!--<li>2014.05.27-27 - JUG Hamburg - CDI Pattern</li>-->
+                <!--<li>2014.05.28-28 - JUG Göttingen - Java 8 Streams</li>-->
+                <!--<li>2014.06.03-03 - JUG Dortmund - Java 8 - Kickstart</li>-->
+                <!--<li>2014.06.04-04 - JUG Berlin - Java 8 - Streams</li>-->
+                <!--<li>2014.06.05-05 - JUG Stuttgart - IoT - TinkerForge</li>-->
+                <!--<li>2014.06.11-11 - JUG Hamburg - CDI Pattern</li>-->
+                <!--<li>2014.06.18-18 - JUG Göttingen - IoT - TinkerForge</li>-->
+                <!--<li>2014.07.14-14 - JUG Hamburg - IoT - TinkerForge - LiveHacking</li>-->
+                <!--<li><b style="color: #000000">2014.07.17-17 - JUG Rostock - Java 8 - Streams</b></li>-->
+                <!--<li>Dresden/Augsburg/Dortmund/Rheinland/Köln/Darmstadt/Münster...</li>-->
+            <!--</ul>-->
+            <!--<p>Freue mich über Kontakte/Empfehlungen zu weiteren JUG´s</p>-->
+        <!--</div>-->
+    <!--</article>-->
+<!--</slide>-->
+
+
+<!--<slide class="thank-you-slide segue nobackground">-->
+    <!--&lt;!&ndash;<aside class="gdbar right">codecentric AG</aside>&ndash;&gt;-->
+    <!--<article class="flexbox vleft auto-fadein">-->
+        <!--<img src="images/DevoxxWithoutBrackets_500.jpg" style="zoom: 80%;  margin-bottom: 20px ;margin-top: 10px">-->
+        <!--<br/>-->
+        <!--<div>-->
+            <!--<p>2014 - erstmalig in Deutschland - Wir benötigen Unterstützung !! </p>-->
+            <!--<p><br/></p>-->
+            <!--<p>Wer hat Lust mit zu helfen?? Bei Interesse bitte bei mir melden.</p>-->
+            <!--<p><br/></p>-->
+            <!--<p>-->
+            <!--<ul>-->
+                <!--<li>http://www.devoxx4kids.org/deutschland/</li>-->
+                <!--<li>Twitter: @Devoxx4KidsDE</li>-->
+            <!--</ul>-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</article>-->
+<!--</slide>-->
+
+<!--<slide class="thank-you-slide segue nobackground">-->
+    <!--&lt;!&ndash;<aside class="gdbar left">codecentric AG</aside>&ndash;&gt;-->
+    <!--<article class="flexbox vleft auto-fadein">-->
+        <!--<h2>München, Hamburg, Berlin, Frankfurt,..</h2>-->
+        <!--<h3>Java 8 Kickstart (auch inhouse) -> 2 Tage</h3>-->
+        <!--<h3>http://www.codecentric.de/java8</h3>-->
+        <!--<br/>-->
+        <!--<div>-->
+            <!--<p>-->
+            <!--<ul>-->
+            <!--<li>Lambdas</li>-->
+            <!--<li>Default Methoden</li>-->
+            <!--<li>Functional - Interfaces</li>-->
+            <!--<li>Date/Time API</li>-->
+            <!--<li>Streams API</li>-->
+            <!--<li>Concurrency mit Streams und StampedLock</li>-->
+            <!--<li>Auswirkungen auf API Design/Evolution</li>-->
+            <!--<li>pre JDK8 Designpatterns migrieren auf JDK8 Pattern</li>-->
+            <!--</ul>-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</article>-->
+<!--</slide>-->
+
+<!--<slide class="thank-you-slide segue nobackground">-->
+    <!--&lt;!&ndash;<aside class="gdbar left">codecentric AG</aside>&ndash;&gt;-->
+        <!--<h2>(privater) Tech - Newsletter</h2>-->
+        <!--<h3>Core Java, Reflection, IoT, uvm</h3>-->
+        <!--<h3>http://www.rapidpm.org </h3>-->
+    <!--<article class="flexbox vleft auto-fadein">-->
+        <!--<p>Bei Interesse bitte bei mir eintragen -> plain old Zettel ;-)</p>-->
+        <!--<p>...oder folgt mir auf Twitter: @SvenRuppert</p>-->
+
+
+    <!--</article>-->
+<!--</slide>-->
+
+
+<!--Kontakt-->
+<!--<slide class="thank-you-slide segue nobackground">-->
+    <!--&lt;!&ndash;<aside class="gdbar right"><img src="images/logo_sru.png"></aside>&ndash;&gt;-->
+    <!--<article class="flexbox vcenter">-->
+        <!--<h2>Java8 intravenös @codecentric</h2>-->
+        <!--<h3><b style="text-decoration:line-through">699.-</b>199.- EUR/Teilnehmer/day (netto) Special for the JUG</h3>-->
+        <!--<span><img src="images/SvenRuppert.jpg" style="zoom: 25%"></span>-->
+        <!--<h3>ab 20 Teilnehmer</h3>-->
+        <!--<div>-->
+            <!--<ul>-->
+                <!--<li>Lambdas</li>-->
+                <!--<li>Default Methoden / Functional - Interfaces</li>-->
+                <!--<li>Date/Time API</li>-->
+                <!--<li>Streams API</li>-->
+                <!--<li>Concurrency mit Streams und StampedLock</li>-->
+            <!--</ul>-->
+            <!--<p> mailto: Sven.Ruppert@codecentric.de / @SvenRuppert</p>-->
+        <!--</div>-->
+    <!--</article>-->
+    <!--<p class="auto-fadein" data-config-contact>-->
+        <!--&lt;!&ndash; populated from slide_config.json &ndash;&gt;-->
+    <!--</p>-->
+<!--</slide>-->
+
+
+
+<!--#######################################################################################-->
+<!--#######################################################################################-->
+<!--#############################     KontaktInfos       ##################################-->
+<!--#######################################################################################-->
+<!--#######################################################################################-->
+
+<slide class="thank-you-slide segue nobackground">
+    <!--<aside class="gdbar vleft">codecentric AG</aside>-->
+    <article class="flexbox vleft auto-fadein">
+        <h2>&lt;Thank You!&gt;</h2>
+
+        <p>
+            <img src="images/SvenRuppert.jpg" style="zoom: 30%">
+            <br/>
+        </p>
+
+        <p></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+        <!-- populated from slide_config.json -->
+    </p>
+</slide>
+
+
+
+
+<slide class="logoslide dark nobackground" hidden>
+    <article class="flexbox vcenter">
+        <span><img src="images/logo_sru.png"></span>
+    </article>
+</slide>
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<!--[if IE]>
+<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+<script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
