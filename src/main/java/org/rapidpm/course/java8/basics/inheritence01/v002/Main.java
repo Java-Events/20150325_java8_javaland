@@ -5,6 +5,8 @@ package org.rapidpm.course.java8.basics.inheritence01.v002;
  */
 public class Main {
     public static void main(String[] args) {
-        new DemoClass(){}.doWork();
+        DemoClass demoClass = new DemoClass() {};
+
+        demoClass.doWork();
     }
 }
