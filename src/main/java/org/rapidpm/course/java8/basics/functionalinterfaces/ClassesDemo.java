@@ -22,5 +22,6 @@ public class ClassesDemo {
 
     public static void main(String[] args) {
         new InnerClass().printMe();
+        new ClassesDemo().new InnerClassNonStatic().printMe();
     }
 }
